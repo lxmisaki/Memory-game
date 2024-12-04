@@ -14,9 +14,11 @@ Un jeu de mémoire en ligne interactif où les joueurs retournent des cartes pou
  Suivez ces étapes pour exécuter le jeu localement :
  
  1- Clonez le dépôt Git
+ 
  git clone https://github.com/lxmisaki/memory-game.git  
  
  2- Accédez au répertoire du projet
+ 
  cd memory-game
  
  3-Ouvrez simplement le fichier memory.html avec votre navigateur préféré.
