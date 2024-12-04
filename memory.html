@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <!-- Déclaration du langage utilisé : français -->
+  <head>
+    <!-- Configuration pour rendre le site responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title> <!-- Titre affiché dans l'onglet du navigateur -->
+
+    <!-- Intégration de la police "Poppins" depuis Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inclusion de la feuille de styles CSS -->
+    <link rel="stylesheet" href="memory.css" />
+  </head>
+  <body>
+    <!-- Conteneur principal pour le jeu -->
+    <div class="wrapper">
+      <!-- Conteneur pour afficher les statistiques -->
+      <div class="stats-container">
+        <div id="moves-count"></div> <!-- Compteur de mouvements -->
+        <div id="time"></div> <!-- Affichage du temps écoulé -->
+      </div>
+
+      <!-- Conteneur pour les cartes du jeu -->
+      <div class="game-container"></div>
+
+      <!-- Bouton pour arrêter le jeu (caché par défaut grâce à la classe 'hide') -->
+      <button id="stop" class="hide">Arreter le jeu</button>
+    </div>
+
+    <!-- Conteneur des contrôles (affiche le bouton de démarrage et les résultats) -->
+    <div class="controls-container">
+      <p id="result"></p> <!-- Zone pour afficher le résultat du jeu -->
+      <button id="start">Commencer le jeu</button> <!-- Bouton pour démarrer le jeu -->
+    </div>
+
+    <!-- Inclusion du script JavaScript pour la logique du jeu -->
+    <script src="memory.js"></script>
+  </body>
+</html>
+

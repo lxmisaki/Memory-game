@@ -1,0 +1,191 @@
+/* Réinitialisation des marges, des paddings, et des tailles pour un rendu uniforme */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Couleur d'arrière-plan du corps */
+body {
+  background-color: #fcd9e1;
+}
+
+/* Style principal du conteneur du jeu */
+.wrapper {
+  width: 90%;
+  max-width: 26.87em; /* Taille maximale */
+  padding: 2.5em 3em; /* Espacement interne */
+  background-color: #d6deb7;
+  position: absolute; /* Centrage avec transform */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 0.6em; /* Coins arrondis */
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2); /* Ombre légère */
+}
+
+/* Grille pour contenir les cartes */
+.game-container {
+  position: relative;
+  display: grid;
+  gap: 0.6em; /* Espacement entre les cartes */
+  grid-template-columns: repeat(4, 1fr); /* Grille de 4 colonnes */
+  width: 100%;
+}
+
+/* Conteneur pour chaque carte */
+.card-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1; /* Assure des cartes carrées */
+  cursor: pointer;
+  overflow: hidden; /* Cache le contenu débordant */
+}
+
+/* Styles pour la face visible et cachée des cartes */
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 5px; /* Coins arrondis */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #000000; /* Bordures noires */
+  transition: transform 0.7s ease-out; /* Transition douce pour le retournement */
+  backface-visibility: hidden; /* Cache l'arrière lors de la rotation */
+}
+
+.card-before {
+  background-color: #fdd9e1;
+  font-size: 2.8em; /* Taille du texte sur la face visible */
+  font-weight: 600;
+}
+
+.card-after {
+  background-color: #ffffff;
+  transform: rotateY(180deg); /* Face arrière initialement cachée */
+}
+
+/* Animation lors du retournement des cartes */
+.card-container.flipped .card-before {
+  transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-after {
+  transform: rotateY(0deg);
+}
+
+/* Conteneur des boutons de contrôle */
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Empile les éléments */
+  width: 100%;
+  height: 100%;
+  background-color: #fdd9e1;
+  top: 0;
+}
+
+/* Style des boutons */
+button {
+  border: none;
+  border-radius: 0.3em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+}
+
+#stop {
+  font-size: 1.1em;
+  display: block;
+  margin: 1.1em auto 0 auto;
+  background-color: #000000; /* Bouton noir */
+  color: #ffffff; /* Texte blanc */
+}
+
+/* Boutons dans le conteneur de contrôle */
+.controls-container button {
+  font-size: 1.3em;
+  box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+
+/* Masquer les éléments avec la classe .hide */
+.hide {
+  display: none;
+}
+
+/* Style des résultats */
+#result {
+  text-align: center;
+}
+
+#result h2 {
+  font-size: 2.5em;
+}
+
+#result h4 {
+  font-size: 1.8em;
+  margin: 0.6em 0 1em 0;
+}
+
+/* Image contenue dans la carte */
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ajuste l'image pour remplir la carte */
+  border-radius: 5px;
+}
+
+/* Styles pour les petits écrans */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 1.5em 2em; 
+  }
+
+  .game-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+  }
+
+  .card-container {
+    aspect-ratio: 1; 
+  }
+
+  .controls-container button {
+    font-size: 1.2em;
+  }
+
+  #result h2 {
+    font-size: 2em; 
+  }
+
+  #result h4 {
+    font-size: 1.5em;
+  }
+}
+
+/* Styles pour les tablettes */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .wrapper {
+    padding: 2em 2.5em; 
+  }
+
+  .game-container {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
+  }
+}
+
+/* Styles pour les grands écrans */
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    width: 26.87em;
+    padding: 2.5em 3em;
+  }
+
+  .game-container {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
