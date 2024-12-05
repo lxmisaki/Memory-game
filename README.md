@@ -17,17 +17,19 @@ Un jeu de mémoire en ligne interactif où les joueurs retournent des cartes pou
  
  git clone https://github.com/lxmisaki/memory-game.git  
  
+
  2- Accédez au répertoire du projet
  
- cd memory-game
  
  3- Vérifiez les fichiers CSS et JS
  
  Assurez-vous que les fichiers CSS et JS associés au jeu (memory.css et memory.js) sont dans le même répertoire que memory.html. Ces fichiers sont essentiels pour le bon fonctionnement et l’apparence du jeu.
 
+
  4- Ouvrez le fichier HTML dans un navigateur
 
  Double-cliquez sur le fichier memory.html, ou utilisez un navigateur pour l’ouvrir
+
 
  5- Jouez au jeu
 
