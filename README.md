@@ -21,9 +21,17 @@ Un jeu de mémoire en ligne interactif où les joueurs retournent des cartes pou
  
  cd memory-game
  
- 3-Ouvrez simplement le fichier memory.html avec votre navigateur préféré.
+ 3- Vérifiez les fichiers CSS et JS
  
- 4- Jouez au jeu
+ Assurez-vous que les fichiers CSS et JS associés au jeu (memory.css et memory.js) sont dans le même répertoire que memory.html. Ces fichiers sont essentiels pour le bon fonctionnement et l’apparence du jeu.
+
+ 4- Ouvrez le fichier HTML dans un navigateur
+
+ Double-cliquez sur le fichier memory.html, ou utilisez un navigateur pour l’ouvrir
+
+ 5- Jouez au jeu
+
+ Une fois ouvert, le jeu devrait se charger correctement, avec les styles et les fonctionnalités interactives activées.
 
  
  ## Utilisation
